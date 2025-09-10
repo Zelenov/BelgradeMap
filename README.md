@@ -1,0 +1,7 @@
+| Place Name | Type | Description | Instagram Link | Google Maps Link |
+|------------|------|-------------|----------------|------------------|
+| Shine S Cleaning | Other | Professional cleaning services for buildings and commercial spaces | [@sharkoff_cleaning_belgrade](https://www.instagram.com/sharkoff_cleaning_belgrade/) | https://maps.google.com/?q=Bore+Markovića+9+11030+Beograd |
+| Pizza Bar Serbia | Restaurant | Popular pizza restaurant with multiple locations, known for quality Italian-style pizzas | [@pizzabarserbia](https://www.instagram.com/pizzabarserbia/) | https://maps.google.com/?q=Pizza+Bar+Mutapova+5-7+Belgrade |
+| Ruske Palačinke | Cafe | Russian pancake house serving traditional blini and Russian specialties | [@ruske_palacinke](https://www.instagram.com/ruske_palacinke/) | https://maps.google.com/?q=Ruske+Palačinke+Belgrade |
+| Peers Belgrade | Bar | Modern bar and restaurant with craft cocktails and contemporary atmosphere | [@peers.beograd](https://www.instagram.com/peers.beograd/) | https://maps.google.com/?q=Peers+Belgrade+bar |
+| Voulez-Vous | Restaurant | Elegant café-restaurant chain with French-inspired cuisine and desserts | [@v_volne.beograd](https://www.instagram.com/v_volne.beograd/) | https://maps.google.com/?q=Voulez-Vous+Đorđa+Vajferta+52+Belgrade |
