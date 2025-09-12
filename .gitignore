@@ -1,2 +1,4 @@
 # Ignore belgradeMap files
 belgradeMap
+__pycache__
+*.json
