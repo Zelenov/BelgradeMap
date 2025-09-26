@@ -27,7 +27,7 @@ def print_instructions():
     print("   - sessionid") 
     print("   - mid (optional but recommended)")
     print()
-    print("7. 💾 Save these values and use them with instagram_fetcher.py")
+    print("7. 💾 Save these values and use them with place_parser.py")
     print()
     print("⚠️  IMPORTANT NOTES:")
     print("- These tokens are tied to your Instagram session")
@@ -44,10 +44,10 @@ def print_instructions():
     
     print()
     print("📝 After you get the tokens, use them like this:")
-    print("python instagram_fetcher.py <username> <csrftoken> <sessionid> [mid]")
+    print("python place_parser.py <username> <csrftoken> <sessionid> [mid]")
     print()
     print("Example:")
-    print("python instagram_fetcher.py boyar.rs abc123def456 xyz789session")
+    print("python place_parser.py boyar.rs abc123def456 xyz789session")
     print()
 
 def create_token_template():
@@ -58,16 +58,16 @@ def create_token_template():
         "mid": "YOUR_MID_HERE_OPTIONAL",
         "instructions": [
             "1. Replace the placeholder values above with your actual tokens",
-            "2. Save this file as 'instagram_tokens.json'",
-            "3. Use the tokens with instagram_fetcher.py",
+            "2. Save this file as 'place_tokens.json'",
+            "3. Use the tokens with place_parser.py",
             "4. Keep this file secure and don't commit it to version control"
         ]
     }
     
-    with open("instagram_tokens_template.json", "w") as f:
+    with open("place_tokens_template.json", "w") as f:
         json.dump(template, f, indent=2)
     
-    print("📄 Created 'instagram_tokens_template.json' for your convenience")
+    print("📄 Created 'place_tokens_template.json' for your convenience")
     print("   You can fill in your tokens and reference them later")
 
 if __name__ == "__main__":
@@ -75,4 +75,4 @@ if __name__ == "__main__":
     create_token_template()
     
     print("✅ Setup complete! You can now get your Instagram tokens.")
-    print("   Remember to use them with the instagram_fetcher.py script.")
+    print("   Remember to use them with the place_parser.py script.")

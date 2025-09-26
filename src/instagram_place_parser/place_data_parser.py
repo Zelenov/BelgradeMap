@@ -216,3 +216,5 @@ def parse_profile_data(profile_data):
         'telegram_link': extract_telegram_link(profile_data),
         'address_text': extract_address_text(profile_data)
     }
+
+

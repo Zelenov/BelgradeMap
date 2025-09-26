@@ -5,8 +5,8 @@ Main entry point that coordinates profile fetching and data parsing.
 """
 
 import json
-from profile_fetcher import fetch_profile_with_curl, extract_username_from_input
-from profile_parser import parse_profile_data
+from place_fetcher import fetch_profile_with_curl, extract_username_from_input
+from place_data_parser import parse_profile_data
 
 def main():
     """
@@ -18,12 +18,12 @@ def main():
     print("=" * 50)
     
     if len(sys.argv) < 2:
-        print("Usage: python instagram_fetcher.py <username_or_url> [--debug]")
+        print("Usage: python place_parser.py <username_or_url> [--debug]")
         print("\nExamples:")
-        print("  python instagram_fetcher.py instagram")
-        print("  python instagram_fetcher.py @instagram")
-        print("  python instagram_fetcher.py https://www.instagram.com/instagram/")
-        print("  python instagram_fetcher.py instagram --debug")
+        print("  python place_parser.py instagram")
+        print("  python place_parser.py @instagram")
+        print("  python place_parser.py https://www.instagram.com/instagram/")
+        print("  python place_parser.py instagram --debug")
         print("\nAUTHENTICATION:")
         print("The script will automatically extract authentication tokens from Firefox or Chrome.")
         print("Make sure you're logged into Instagram in one of these browsers before running the script.")

@@ -7,7 +7,7 @@ Handles authentication and API requests to Instagram.
 import requests
 import json
 import re
-from token_extractor import extract_instagram_tokens
+from ..token_extractors.place_token_extractor import extract_instagram_tokens
 
 def extract_username_from_input(user_input):
     """
@@ -118,3 +118,5 @@ def fetch_profile_with_curl(username, csrftoken=None, sessionid=None, mid=None):
             
     except Exception as e:
         return {"error": str(e)}
+
+

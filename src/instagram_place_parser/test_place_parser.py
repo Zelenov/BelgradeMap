@@ -11,10 +11,10 @@ import json
 import sys
 import os
 
-# Add the current directory to the path so we can import instagram_fetcher
+# Add the current directory to the path so we can import place_data_parser
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from instagram_fetcher import (
+from place_data_parser import (
     extract_wolt_url,
     extract_google_maps,
     extract_website_url,
@@ -170,6 +170,7 @@ class TestInstagramProfiles(unittest.TestCase):
         self.assertIsNone(address_text, "Error case should return None for address text")
     
     def test_kulturacafe_restaurant_profile(self):
+
         """Test extraction for @kulturacafe.restaurant profile - empty response case."""
         # Empty response data (what kulturacafe.restaurant actually returns)
         profile_data = {
