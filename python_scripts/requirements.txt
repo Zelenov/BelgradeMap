@@ -1,0 +1,3 @@
+# Requirements for process_all_places.py
+# This script uses only Python standard library modules
+# No additional packages required
