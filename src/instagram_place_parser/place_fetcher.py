@@ -7,7 +7,12 @@ Handles authentication and API requests to Instagram.
 import requests
 import json
 import re
-from ..token_extractors.place_token_extractor import extract_instagram_tokens
+import sys
+import os
+
+# Add the token_extractors directory to the path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'token_extractors'))
+from place_token_extractor import extract_instagram_tokens
 
 def extract_username_from_input(user_input):
     """

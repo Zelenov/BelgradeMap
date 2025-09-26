@@ -204,12 +204,66 @@ def extract_address_text(profile_data):
     
     return None
 
+def extract_place_name(profile_data):
+    """
+    Extract the place name (full_name) from profile data.
+    Returns: Optional[str] - Place name if found, None otherwise
+    """
+    if 'error' in profile_data:
+        return None
+    
+    if 'data' not in profile_data or 'user' not in profile_data['data']:
+        return None
+    
+    user = profile_data['data']['user']
+    
+    # Get the full name from the profile
+    full_name = user.get('full_name')
+    if full_name and full_name.strip():
+        return full_name.strip()
+    
+    # If no full_name, try to extract from biography
+    biography = user.get('biography', '')
+    if biography:
+        # Look for common patterns that might indicate a place name
+        # Remove common prefixes/suffixes and extract the main name
+        bio_lines = biography.split('\n')
+        for line in bio_lines:
+            line = line.strip()
+            if line and not line.startswith(('📍', '🌐', '📱', '🍽️', '📞', '📧', 'http', 'www.')):
+                # This might be the place name
+                return line
+    
+    return None
+
+def extract_instagram_handle(profile_data):
+    """
+    Extract the Instagram handle (username) from profile data.
+    Returns: Optional[str] - Instagram handle if found, None otherwise
+    """
+    if 'error' in profile_data:
+        return None
+    
+    if 'data' not in profile_data or 'user' not in profile_data['data']:
+        return None
+    
+    user = profile_data['data']['user']
+    
+    # Get the username from the profile
+    username = user.get('username')
+    if username and username.strip():
+        return username.strip()
+    
+    return None
+
 def parse_profile_data(profile_data):
     """
     Parse all profile data and return a dictionary with extracted information.
     Returns: dict - Dictionary with all extracted information
     """
     return {
+        'instagram_handle': extract_instagram_handle(profile_data),
+        'place_name': extract_place_name(profile_data),
         'wolt_url': extract_wolt_url(profile_data),
         'google_maps': extract_google_maps(profile_data),
         'website_url': extract_website_url(profile_data),

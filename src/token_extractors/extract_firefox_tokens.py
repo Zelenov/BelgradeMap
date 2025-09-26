@@ -157,7 +157,7 @@ def main():
         print(f"  {tokens.get('sessionid', 'YOUR_SESSION_ID')}")
         
         # Save tokens to file
-        tokens_file = "instagram_tokens_firefox.json"
+        tokens_file = "instagram_tokens_firefox.cookies"
         with open(tokens_file, 'w') as f:
             json.dump(tokens, f, indent=2)
         

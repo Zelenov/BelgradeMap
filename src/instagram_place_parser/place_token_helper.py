@@ -58,16 +58,16 @@ def create_token_template():
         "mid": "YOUR_MID_HERE_OPTIONAL",
         "instructions": [
             "1. Replace the placeholder values above with your actual tokens",
-            "2. Save this file as 'place_tokens.json'",
+            "2. Save this file as 'place_tokens.cookies'",
             "3. Use the tokens with place_parser.py",
             "4. Keep this file secure and don't commit it to version control"
         ]
     }
     
-    with open("place_tokens_template.json", "w") as f:
+    with open("place_tokens_template.cookies", "w") as f:
         json.dump(template, f, indent=2)
     
-    print("📄 Created 'place_tokens_template.json' for your convenience")
+    print("📄 Created 'place_tokens_template.cookies' for your convenience")
     print("   You can fill in your tokens and reference them later")
 
 if __name__ == "__main__":
